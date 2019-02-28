@@ -1,0 +1,17 @@
+{
+  "name": "gcrp-equipment-api",
+  "private": true,
+  "version": "0.1.0",
+  "author": "falconpilot",
+  "scripts": {
+    "dev": "dotenv nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "npm": "^6.8.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^1.4.0",
+    "nodemon": "^1.18.10"
+  }
+}
