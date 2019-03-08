@@ -1,6 +1,9 @@
+const cors = require('cors')
 const app = require('express')()
 
 const plugRouter = require('./router')
+
+app.use(cors())
 
 // Plug router to app
 plugRouter(app)

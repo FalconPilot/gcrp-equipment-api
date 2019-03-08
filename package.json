@@ -5,11 +5,17 @@
   "author": "falconpilot",
   "scripts": {
     "dev": "dotenv nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "db:create": "dotenv sequelize db:create",
+    "db:all:staging": "dotenv npm run db:create"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "npm": "^6.8.0"
+    "npm": "^6.8.0",
+    "sequelize": "^4.43.0",
+    "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
     "dotenv-cli": "^1.4.0",
