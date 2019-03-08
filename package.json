@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "author": "falconpilot",
   "scripts": {
-    "dev": "dotenv nodemon src/index.js"
+    "dev": "dotenv nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "dependencies": {
     "express": "^4.16.4",
