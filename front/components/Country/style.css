@@ -1,0 +1,29 @@
+table.country-stuff {
+  width: 80%;
+}
+
+table.country-stuff td:first-child {
+  width: 150px;
+  font-weight: bold;
+}
+
+table.country-stuff td:nth-child(2) {
+  font-style: italic;
+  font-size: 14px;
+}
+
+table.country-stuff td {
+  padding: 10px 0;
+  border-bottom: 1px dashed #CCC;
+  color: #777;
+}
+
+td.military_link {
+  text-align: center;
+}
+
+pre.country-description {
+  width: 100%;
+  padding: 5px;
+  white-space: pre-wrap;
+}

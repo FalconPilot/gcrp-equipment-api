@@ -1,0 +1,164 @@
+p.weapon-subtitle {
+  font-style: italic;
+  margin: 0 0 20px 0;
+}
+
+p.weapon-subtitle.future {
+  color: #AAA;
+}
+
+div.weapon-attributes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.weapon-qualities {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+div.weapon-stat {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+div.weapon-stat > label {
+  width: 40px;
+  padding-left: 10px;
+  font-size: 10px;
+  font-style: italic;
+  color: #999;
+}
+
+div.weapon-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 20px;
+  margin-left: 40px;
+  background-color: #333;
+  border: 1px solid #668;
+  border-radius: 4px;
+}
+
+div.weapon-bar > strong {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  z-index: 2;
+  color: #FFF;
+}
+
+div.weapon-bar > p {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  background-color: #468;
+  border-radius: 3px;
+}
+
+table.weapon-caracs {
+  padding: 8px;
+  border: 1px dotted #777;
+  border-radius: 10px;
+}
+
+table.weapon-caracs td:first-child {
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+table.weapon-caracs td:nth-child(2) {
+  font-style: italic;
+  font-size: 12px;
+}
+
+table.weapon-caracs td {
+  color: #777;
+  padding: 2px;
+  border-bottom: 1px dashed #AAA;
+}
+
+table.weapon-quality {
+  width: 50%;
+}
+
+table.weapon-quality th {
+  border-bottom: 1px solid #CCC;
+}
+
+table.weapon-quality td:first-child {
+  width: 1em;
+  text-align: center;
+}
+
+table.weapon-quality td:nth-child(2) {
+  padding-right: 20px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+table.weapon-quality.pros th,
+table.weapon-quality.pros td:first-child {
+  color: #5C5;
+  font-weight: bold;
+}
+
+table.weapon-quality.cons th,
+table.weapon-quality.cons td:first-child {
+  color: #C55;
+  font-weight: bold;
+}
+
+pre.weapon-description {
+  width: 100%;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+
+div.weapon-authors {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+div.weapon-authors > h5 {
+  margin: 5px 0;
+  font-size: 15px;
+  font-style: italic;
+  color: #777;
+  border-bottom: 1px solid #CCC;
+}
+
+div.weapon-authors > h5:before {
+  content: "ℹ ";
+  font-style: normal;
+  color: #333;
+  font-size: 20px;
+}
+
+div.weapon-authors > p {
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+@media all and (max-width: 748px) {
+  div.weapon-attributes {
+    flex-direction: column-reverse;
+  }
+}
