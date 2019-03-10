@@ -6,18 +6,14 @@
   "scripts": {
     "dev": "npm run install:front && concurrently 'cd front && npm run watch' 'dotenv nodemon src/index.js'",
     "install:front": "cd front && npm install && npm run build",
-    "build": "npm run install:front",
+    "build": "npm run db:migrate && npm run install:front",
     "clean": "npm run clean:parcel && npm run clean:modules",
     "clean:parcel": "rm -rf src/dist && rm -rf src/.parcel-cache",
     "clean:modules": "rm -rf node_modules && rm -rf front/node_modules",
-  
-    "db:create:production": "sequelize db:create",
+    "db:create": "sequelize db:create",
     "db:create:staging": "dotenv sequelize db:create",
-    "db:migrate:production": "sequelize db:migrate",
-    "db:migrate:staging": "dotenv sequelize db:migrate",
-    "db:all:staging": "npm run db:create:staging",
-  
-    "start": "npm run db:migrate:production && node src/index.js"
+    "db:migrate": "sequelize db:migrate",  
+    "start": "node src/index.js"
   },
   "heroku-run-build-script": true,
   "dependencies": {
