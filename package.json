@@ -10,17 +10,27 @@
     "clean": "npm run clean:parcel && npm run clean:modules",
     "clean:parcel": "rm -rf src/dist && rm -rf src/.parcel-cache",
     "clean:modules": "rm -rf node_modules && rm -rf front/node_modules",
-    "start": "node src/index.js"
+  
+    "db:create:production": "sequelize db:create",
+    "db:create:staging": "dotenv sequelize db:create",
+    "db:migrate:production": "sequelize db:migrate",
+    "db:migrate:staging": "dotenv sequelize db:migrate",
+    "db:all:staging": "npm run db:create:staging",
+  
+    "start": "npm run db:migrate:production && node src/index.js"
   },
   "heroku-run-build-script": true,
   "dependencies": {
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
-    "mime": "^2.4.0"
+    "mime": "^2.4.0",
+    "pg": "^7.8.2",
+    "sequelize": "^4.43.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "dotenv-cli": "^1.4.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.4.0"
   }
 }
