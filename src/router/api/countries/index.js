@@ -13,3 +13,5 @@ router.get('/:country',
     res.status(200).json(req.country)
   }
 )
+
+module.exports = router
