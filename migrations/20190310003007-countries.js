@@ -4,17 +4,26 @@ module.exports = {
   up: (queryInterface, Sequelize) => (
     queryInterface.createTable('countries', {
       id: {
+        primaryKey: true,
         type: Sequelize.UUID,
         allowNull: false,
         defaultValue: Sequelize.UUIDV4
       },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
+      },
       name: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       acronym: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       color: {
         type: Sequelize.TEXT,

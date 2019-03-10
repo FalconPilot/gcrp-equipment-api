@@ -2,22 +2,27 @@
 const Sequelize = require('sequelize')
 
 const Country = (sequelize) => sequelize.define('countries', {
-  indexes: [{
-    unique: true,
-    fields: ['id']
-  }],
   id: {
+    primaryKey: true,
     type: Sequelize.UUID,
     allowNull: false,
     defaultValue: Sequelize.UUIDV4
   },
+  createdAt: {
+    type: Sequelize.DATE
+  },
+  updatedAt: {
+    type: Sequelize.DATE
+  },
   name: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   acronym: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   color: {
     type: Sequelize.TEXT,

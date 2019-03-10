@@ -10,13 +10,21 @@ module.exports = {
   up: (queryInterface, Sequelize) => (
     queryInterface.createTable('weapons', {
       id: {
+        primaryKey: true,
         type: Sequelize.UUID,
         allowNull: false,
         defaultValue: Sequelize.UUIDV4
       },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
+      },
       name: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       year: {
         type: Sequelize.INTEGER,

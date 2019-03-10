@@ -7,18 +7,22 @@ const percentage = {
 }
 
 const Weapon = (sequelize) => sequelize.define('weapons', {
-  indexes: [{
-    unique: true,
-    fields: ['id']
-  }],
   id: {
+    primaryKey: true,
     type: Sequelize.UUID,
     allowNull: false,
     defaultValue: Sequelize.UUIDV4
   },
+  createdAt: {
+    type: Sequelize.DATE
+  },
+  updatedAt: {
+    type: Sequelize.DATE
+  },
   name: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   year: {
     type: Sequelize.INTEGER,
@@ -93,4 +97,4 @@ const Weapon = (sequelize) => sequelize.define('weapons', {
   }
 })
 
-export default Weapon
+module.exports = Weapon
